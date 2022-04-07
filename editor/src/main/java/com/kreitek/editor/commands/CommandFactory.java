@@ -11,14 +11,8 @@ public class CommandFactory {
             case "a" -> createAppendCommand(args[1]);
             case "u" -> createUpdateCommand(args[1], args[2]);
             case "d" -> createDeleteCommand(args[1]);
-            case "undo" -> createUndoCommand();
             default -> throw new ExitException();
         };
-    }
-
-    private Command createUndoCommand() {
-        // TODO create undo command
-        return null;
     }
 
     private Command createDeleteCommand(String lineNumber) {
